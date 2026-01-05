@@ -43,45 +43,55 @@ $subtext-color: #555;
 
       .prev-btn,
       .next-btn {
-        padding: 10px 20px;
-        border: none;
+        padding: 10px 22px;
         font-size: 1rem;
         font-weight: 600;
         cursor: pointer;
+        position: relative;
+        z-index: 2;
       }
 
       .prev-btn {
-        background: white;
-        color: $text-color;
-        border: 2px solid $text-color;
+        background: $primary-color;
+        color: white;
+        border: 1px solid $primary-color;
+        border-radius: 28px;
+        min-width: 120px;
+        text-align: center;
       }
 
       .next-btn {
-        background: $primary-color;
-        color: white;
+        background: white;
+        border: 1px solid $primary-color;
+        color: black;
+        border-radius: 28px;
+        min-width: 120px;
+        text-align: center;
       }
     }
   }
 
+  .circle-col {
+    position: relative;
+  }
+
+  .circle-bg {
+    position: absolute;
+    transform: translateY(40%);
+    right: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: $primary-color;
+    z-index: 1;
+  }
+
   .media {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .circle-bg {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      aspect-ratio: 1 / 1;
-      position: absolute;
-      background: $primary-color;
-      right: 0;
-      z-index: 1;
-    }
 
     .banner-img {
       width: 100%;
+      height: auto;
       position: relative;
       z-index: 2;
     }
