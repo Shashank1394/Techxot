@@ -1,0 +1,64 @@
+.unified-dot {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.unified-dot .copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.unified-dot .copy .initial-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+.unified-dot .copy .title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 15px;
+}
+.unified-dot .copy .sub-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+.unified-dot .copy .controls {
+  display: flex;
+  gap: 12px;
+}
+.unified-dot .copy .controls .prev-btn,
+.unified-dot .copy .controls .next-btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.unified-dot .copy .controls .prev-btn {
+  background: white;
+  color: #222;
+  border: 2px solid #222;
+}
+.unified-dot .copy .controls .next-btn {
+  background: #2b7fff;
+  color: white;
+}
+.unified-dot .media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.unified-dot .media .banner-img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}/*# sourceMappingURL=styles.css.map */
