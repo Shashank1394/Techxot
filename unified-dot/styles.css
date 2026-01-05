@@ -57,6 +57,16 @@
   justify-content: center;
   align-items: center;
 }
+.unified-dot .media .circle-bg {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  background: #2b7fff;
+  right: 0;
+  z-index: 1;
+}
 .unified-dot .media .banner-img {
   width: 100%;
   position: relative;
