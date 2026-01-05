@@ -26,7 +26,7 @@
 }
 .unified-dot .copy .sub-text {
   font-size: 1rem;
-  color: #555;
+  color: #222;
   line-height: 1.6;
   margin-bottom: 25px;
 }
@@ -44,16 +44,16 @@
   z-index: 2;
 }
 .unified-dot .copy .controls .prev-btn {
-  background: #2b7fff;
+  background: #2f00ff;
   color: white;
-  border: 1px solid #2b7fff;
+  border: 1px solid #2f00ff;
   border-radius: 28px;
   min-width: 120px;
   text-align: center;
 }
 .unified-dot .copy .controls .next-btn {
   background: white;
-  border: 1px solid #2b7fff;
+  border: 1px solid #2f00ff;
   color: black;
   border-radius: 28px;
   min-width: 120px;
@@ -80,4 +80,31 @@
   height: auto;
   position: relative;
   z-index: 2;
+}
+
+.bg-base {
+  background-color: #2b7fff;
+  color: white;
+}
+.bg-base .copy .initial-text {
+  color: white;
+}
+.bg-base .copy .title {
+  color: white;
+}
+.bg-base .copy .sub-text {
+  color: white;
+}
+.bg-base .copy .controls .prev-btn {
+  background: #2f00ff;
+  color: white;
+  border: 1px solid #2f00ff;
+}
+.bg-base .copy .controls .next-btn {
+  background: #2b7fff;
+  border: 1px solid #2f00ff;
+  color: white;
+}
+.bg-base .circle-bg {
+  background: white;
 }/*# sourceMappingURL=styles.css.map */

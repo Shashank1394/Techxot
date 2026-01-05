@@ -1,6 +1,5 @@
 $primary-color: #2b7fff;
 $text-color: #222;
-$subtext-color: #555;
 
 .unified-dot {
   width: 100%;
@@ -32,7 +31,7 @@ $subtext-color: #555;
 
     .sub-text {
       font-size: 1rem;
-      color: $subtext-color;
+      color: $text-color;
       line-height: 1.6;
       margin-bottom: 25px;
     }
@@ -52,9 +51,9 @@ $subtext-color: #555;
       }
 
       .prev-btn {
-        background: $primary-color;
+        background: #2f00ff;
         color: white;
-        border: 1px solid $primary-color;
+        border: 1px solid #2f00ff;
         border-radius: 28px;
         min-width: 120px;
         text-align: center;
@@ -62,7 +61,7 @@ $subtext-color: #555;
 
       .next-btn {
         background: white;
-        border: 1px solid $primary-color;
+        border: 1px solid #2f00ff;
         color: black;
         border-radius: 28px;
         min-width: 120px;
@@ -95,5 +94,42 @@ $subtext-color: #555;
       position: relative;
       z-index: 2;
     }
+  }
+}
+
+.bg-base {
+  background-color: $primary-color;
+  color: white;
+
+  .copy {
+    .initial-text {
+      color: white;
+    }
+
+    .title {
+      color: white;
+    }
+
+    .sub-text {
+      color: white;
+    }
+
+    .controls {
+      .prev-btn {
+        background: #2f00ff;
+        color: white;
+        border: 1px solid #2f00ff;
+      }
+
+      .next-btn {
+        background: $primary-color;
+        border: 1px solid #2f00ff;
+        color: white;
+      }
+    }
+  }
+
+  .circle-bg {
+    background: white;
   }
 }
