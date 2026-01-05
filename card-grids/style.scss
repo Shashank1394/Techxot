@@ -70,3 +70,21 @@
     }
   }
 }
+
+.base {
+  .col-item {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .col-item {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .col-item {
+      width: 50%;
+    }
+  }
+}
