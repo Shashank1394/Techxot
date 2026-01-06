@@ -1,6 +1,6 @@
 .unified-dot {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   position: relative;
