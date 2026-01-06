@@ -1,20 +1,14 @@
-:root {
-  --primary-blue: #2b7fff;
-  --text-dark: #000;
-  --text-light: #fff;
-}
-
 .bg-base {
-  --primary-blue: #fff;
-  --text-dark: #000;
-  --text-light: #2b7fff;
+  --primary: #fff;
+  --dark: #000;
+  --light: #2b7fff;
 }
 
 .unified-frame.l3-hero::after {
   content: "";
   position: absolute;
   z-index: 1;
-  background-color: var(--primary-blue);
+  background-color: var(--primary);
   bottom: 0;
   left: 0;
   width: 100%;
@@ -58,23 +52,17 @@
   }
 }
 
-:root {
-  --primary-blue: #2b7fff;
-  --text-dark: #000;
-  --text-light: #fff;
-}
-
 .bg-base {
-  --primary-blue: #fff;
-  --text-dark: #000;
-  --text-light: #2b7fff;
+  --primary: #fff;
+  --dark: #000;
+  --light: #2b7fff;
 }
 
 .unified-vertical.l3-hero::after {
   content: "";
   position: absolute;
   z-index: 1;
-  background-color: var(--primary-blue);
+  background-color: var(--primary);
   bottom: 0;
   left: 0;
   width: 100%;
@@ -118,18 +106,15 @@
   }
 }
 
-:root {
-  --primary-blue: #2b7fff;
-  --text-dark: #000;
-  --text-light: #fff;
-}
-
 .bg-base {
-  --primary-blue: #fff;
-  --text-dark: #000;
-  --text-light: #2b7fff;
+  --primary: #fff;
+  --dark: #000;
+  --light: #2b7fff;
 }
 
+.unified-dot.l3-hero {
+  background-color: var(--light);
+}
 .unified-dot.l3-hero .media {
   position: relative;
 }
@@ -141,7 +126,7 @@
   width: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: var(--primary-blue);
+  background-color: var(--primary);
   z-index: 1;
 }
 .unified-dot.l3-hero .secondary-img {
@@ -163,7 +148,7 @@
     height: auto;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     z-index: 1;
   }
   .unified-dot.l3-hero .secondary-img {
@@ -176,11 +161,17 @@
   }
 }
 
+:root {
+  --primary: #2b7fff;
+  --dark: #000;
+  --light: #fff;
+}
+
 .l3-hero {
   width: 100%;
   height: auto;
   position: relative;
-  background-color: var(--text-light);
+  background-color: var(--light);
 }
 .l3-hero .copy {
   display: flex;
@@ -199,18 +190,18 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  border: 1px solid var(--primary-blue);
+  border: 1px solid var(--primary);
   border-radius: 28px;
   min-width: 120px;
   text-align: center;
 }
 .l3-hero .prev-btn {
-  background-color: var(--primary-blue);
-  color: var(--text-light);
+  background-color: var(--primary);
+  color: var(--light);
 }
 .l3-hero .next-btn {
-  background-color: var(--text-light);
-  color: var(--text-dark);
+  background-color: var(--light);
+  color: var(--primary);
 }
 .l3-hero .dot {
   display: none;

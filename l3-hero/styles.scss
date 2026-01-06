@@ -2,11 +2,17 @@
 @import "variants/unified-vertical";
 @import "variants/unified-dot";
 
+:root {
+  --primary: #2b7fff;
+  --dark: #000;
+  --light: #fff;
+}
+
 .l3-hero {
   width: 100%;
   height: auto;
   position: relative;
-  background-color: var(--text-light);
+  background-color: var(--light);
 
   .copy {
     display: flex;
@@ -27,20 +33,20 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    border: 1px solid var(--primary-blue);
+    border: 1px solid var(--primary);
     border-radius: 28px;
     min-width: 120px;
     text-align: center;
   }
 
   .prev-btn {
-    background-color: var(--primary-blue);
-    color: var(--text-light);
+    background-color: var(--primary);
+    color: var(--light);
   }
 
   .next-btn {
-    background-color: var(--text-light);
-    color: var(--text-dark);
+    background-color: var(--light);
+    color: var(--primary);
   }
 
   .dot {

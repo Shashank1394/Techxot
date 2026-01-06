@@ -1,13 +1,7 @@
-:root {
-  --primary-blue: #2b7fff;
-  --text-dark: #000;
-  --text-light: #fff;
-}
-
 .bg-base {
-  --primary-blue: #fff;
-  --text-dark: #000;
-  --text-light: #2b7fff;
+  --primary: #fff;
+  --dark: #000;
+  --light: #2b7fff;
 }
 
 .unified-vertical.l3-hero {
@@ -15,7 +9,7 @@
     content: "";
     position: absolute;
     z-index: 1;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
 
     bottom: 0;
     left: 0;

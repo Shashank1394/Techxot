@@ -1,16 +1,11 @@
-:root {
-  --primary-blue: #2b7fff;
-  --text-dark: #000;
-  --text-light: #fff;
-}
-
 .bg-base {
-  --primary-blue: #fff;
-  --text-dark: #000;
-  --text-light: #2b7fff;
+  --primary: #fff;
+  --dark: #000;
+  --light: #2b7fff;
 }
 
 .unified-dot.l3-hero {
+  background-color: var(--light);
   .media {
     position: relative;
   }
@@ -23,7 +18,7 @@
     width: calc(100% / 12 * 6);
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     z-index: 1;
   }
 
@@ -47,7 +42,7 @@
       height: auto;
       aspect-ratio: 1/1;
       border-radius: 50%;
-      background-color: var(--primary-blue);
+      background-color: var(--primary);
       z-index: 1;
     }
 
