@@ -10,13 +10,13 @@
   --text-light: #2b7fff;
 }
 
-.l3-hero {
+.unified-frame.l3-hero {
   width: 100%;
   height: auto;
   position: relative;
   background-color: var(--text-light);
 }
-.l3-hero::after {
+.unified-frame.l3-hero::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -26,19 +26,19 @@
   width: 100%;
   height: 18%;
 }
-.l3-hero .copy {
+.unified-frame.l3-hero .copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
   padding: 3rem;
 }
-.l3-hero .cta-list {
+.unified-frame.l3-hero .cta-list {
   display: flex;
   gap: 12px;
 }
-.l3-hero .prev-btn,
-.l3-hero .next-btn {
+.unified-frame.l3-hero .prev-btn,
+.unified-frame.l3-hero .next-btn {
   padding: 10px 22px;
   font-size: 1rem;
   font-weight: 600;
@@ -48,21 +48,21 @@
   min-width: 120px;
   text-align: center;
 }
-.l3-hero .prev-btn {
+.unified-frame.l3-hero .prev-btn {
   background-color: var(--primary-blue);
   color: var(--text-light);
 }
-.l3-hero .next-btn {
+.unified-frame.l3-hero .next-btn {
   background-color: var(--text-light);
   color: var(--text-dark);
 }
-.l3-hero .media {
+.unified-frame.l3-hero .media {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
 }
-.l3-hero .main-img {
+.unified-frame.l3-hero .main-img {
   width: 70vw;
   height: auto;
   aspect-ratio: 1/1;
@@ -71,39 +71,24 @@
   border-radius: 50%;
   z-index: 2;
 }
-
-@media (min-width: 576px) {
-  .media {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  .main-img {
-    width: 90vw;
-    max-width: 380px;
-    height: auto;
-    aspect-ratio: 1/1;
-    margin: 0 auto;
-  }
-}
 @media (min-width: 992px) {
-  .l3-hero::after {
+  .unified-frame.l3-hero::after {
     top: 0;
     right: 0;
     left: auto;
     bottom: auto;
-    width: 18%;
+    width: 16.6666666667%;
     height: 100%;
   }
-  .main-img {
+  .unified-frame.l3-hero .main-img {
     width: 100%;
   }
 }
 @media (min-width: 1920px) {
-  .l3-hero::after {
+  .unified-frame.l3-hero::after {
     width: 27%;
   }
-  .main-img {
-    width: 100%;
+  .unified-frame.l3-hero .main-img {
     transform: scale(1.05);
   }
 }/*# sourceMappingURL=styles.css.map */
