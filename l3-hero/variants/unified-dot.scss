@@ -1,0 +1,40 @@
+:root {
+  --primary-blue: #2b7fff;
+  --text-dark: #000;
+  --text-light: #fff;
+}
+
+.bg-base {
+  --primary-blue: #fff;
+  --text-dark: #000;
+  --text-light: #2b7fff;
+}
+
+.unified-dot.l3-hero {
+  .media {
+    position: relative;
+  }
+
+  .media .dot {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    z-index: 1;
+  }
+
+  .secondary-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    transform: translateX(calc(-100% / 5));
+  }
+}
