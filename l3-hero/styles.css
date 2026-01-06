@@ -136,26 +136,44 @@
 .unified-dot.l3-hero .media .dot {
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: auto;
+  top: 0;
+  left: 25%;
+  width: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: var(--primary-blue);
   z-index: 1;
 }
-.unified-dot.l3-hero .main-img {
-  display: none;
-}
 .unified-dot.l3-hero .secondary-img {
   display: block;
-  width: 100%;
+  width: 50%;
   height: auto;
   position: relative;
   z-index: 2;
-  transform: translateX(-20%);
+  transform: translateX(33.3333333333%) translateY(-15%);
+}
+@media (min-width: 992px) {
+  .unified-dot.l3-hero .media .dot {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    z-index: 1;
+  }
+  .unified-dot.l3-hero .secondary-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    transform: translateX(-20%);
+  }
 }
 
 .l3-hero {

@@ -18,11 +18,9 @@
   .media .dot {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: auto;
+    top: 0;
+    left: calc(100% / 12 * 3);
+    width: calc(100% / 12 * 6);
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--primary-blue);
@@ -31,10 +29,35 @@
 
   .secondary-img {
     display: block;
-    width: 100%;
+    width: calc(100% / 12 * 6);
     height: auto;
     position: relative;
     z-index: 2;
-    transform: translateX(calc(-100% / 5));
+    transform: translateX(calc(100% / 12 * 4)) translateY(-15%);
+  }
+
+  @media (min-width: 992px) {
+    .media .dot {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: var(--primary-blue);
+      z-index: 1;
+    }
+
+    .secondary-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+      transform: translateX(calc(-100% / 5));
+    }
   }
 }
