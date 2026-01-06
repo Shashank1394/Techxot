@@ -70,8 +70,12 @@ $text-color: #222;
     }
   }
 
-  .circle-col {
+  .media-row {
     position: relative;
+
+    .dot {
+      position: relative;
+    }
   }
 
   .circle-bg {

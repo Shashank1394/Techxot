@@ -59,7 +59,10 @@
   min-width: 120px;
   text-align: center;
 }
-.unified-dot .circle-col {
+.unified-dot .media-row {
+  position: relative;
+}
+.unified-dot .media-row .dot {
   position: relative;
 }
 .unified-dot .circle-bg {
