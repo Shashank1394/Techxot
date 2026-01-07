@@ -1,63 +1,89 @@
-@import "variants/unified-frame";
-@import "variants/unified-vertical";
-@import "variants/unified-dot";
-
-:root {
-  --primary: #2b7fff;
-  --dark: #000;
-  --light: #fff;
-}
-
 .l3-hero {
   width: 100%;
   height: auto;
-  position: relative;
-  background-color: var(--light);
+  font-family: "Inter", sans-serif;
 
   .copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 120px 0;
     text-align: left;
-    padding: 3rem;
+
+    .intro {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .title {
+      font-size: 48px;
+      line-height: 64px;
+      font-weight: 200;
+    }
+
+    .sub-title {
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 24px;
+    }
+
+    .cta-list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: auto;
+
+      .left-btn {
+        all: unset;
+        width: auto;
+        height: auto;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0639a6;
+        padding: 20px 24px;
+        border-radius: 50px;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .list-anchor {
+        margin-left: 1rem;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
   }
 
-  .cta-list {
+  .media {
     display: flex;
-    gap: 12px;
-  }
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    overflow: hidden;
+    position: relative;
 
-  .prev-btn,
-  .next-btn {
-    padding: 10px 22px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: 1px solid var(--primary);
-    border-radius: 28px;
-    min-width: 120px;
-    text-align: center;
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 60%;
+      width: 40%;
+      height: 100%;
+      background-color: #2668ff;
+      z-index: 0;
+    }
 
-  .prev-btn {
-    background-color: var(--primary);
-    color: var(--light);
-  }
-
-  .next-btn {
-    background-color: var(--light);
-    color: var(--primary);
-  }
-
-  .dot {
-    display: none;
-  }
-
-  .main-img {
-    display: none;
-  }
-
-  .secondary-img {
-    display: none;
+    .main-img {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      margin: auto;
+      position: relative;
+    }
   }
 }
