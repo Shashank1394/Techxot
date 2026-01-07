@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "variants/unified-frame";
+
 :root {
   --primary-col: #2668ff;
   --accent-col: #0639a6;
@@ -7,13 +11,11 @@
   overflow: hidden;
 }
 
-.bg-base {
-  --background-col: #2668ff;
-  --text-dark: #ffffff;
-  --primary-col: #ffffff;
-}
-
 .l3-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
   width: 100%;
   height: auto;
   font-family: "Inter", sans-serif;
@@ -25,6 +27,26 @@
     padding-right: 39px;
     text-align: left;
     color: var(--text-dark);
+
+    .intro {
+      font-weight: 700;
+      font-size: 12px;
+      font-style: bold;
+    }
+
+    .title {
+      font-weight: 200;
+      font-size: 40px;
+      line-height: 48px;
+      padding-bottom: 16px;
+    }
+
+    .sub-text {
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 24px;
+      padding-bottom: 16px;
+    }
 
     .cta-list {
       display: flex;
@@ -63,69 +85,6 @@
         path {
           stroke: var(--text-dark);
         }
-      }
-    }
-  }
-
-  .media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: -50%;
-      width: 200%;
-      height: 40%;
-      background-color: var(--primary-col);
-      z-index: 0;
-    }
-
-    .main-img {
-      position: relative;
-      width: 55%;
-      height: auto;
-      border-radius: 50%;
-      display: block;
-      margin: auto;
-      z-index: 1;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .copy {
-      padding-left: 76px;
-      padding-right: 76px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .copy {
-      padding: 120px 0;
-
-      .title {
-        font-size: 48px;
-        line-height: 64px;
-      }
-    }
-
-    .media {
-      &::after {
-        top: 0;
-        bottom: auto;
-        left: 60%;
-        width: 200%;
-        height: 100%;
-        background-color: var(--primary-col);
-      }
-
-      .main-img {
-        width: 100%;
-        height: auto;
       }
     }
   }
