@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "variants/unified-vertical.css";
 :root {
   --primary-col: #2668ff;
   --accent-col: #0639a6;
@@ -15,7 +14,7 @@
   --primary-col: #ffffff;
 }
 
-.l3-hero.unified-frame {
+.l3-hero.unified-vertical {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,33 +22,34 @@
   width: 100%;
   height: auto;
   position: relative;
+  font-family: "Inter", sans-serif;
   background-color: var(--background-col);
 }
-.l3-hero.unified-frame .copy {
+.l3-hero.unified-vertical .copy {
   padding-top: 56px;
   padding-left: 39px;
   padding-right: 39px;
   text-align: left;
   color: var(--text-dark);
 }
-.l3-hero.unified-frame .copy .intro {
+.l3-hero.unified-vertical .copy .intro {
   font-weight: 700;
   font-size: 12px;
   font-style: bold;
 }
-.l3-hero.unified-frame .copy .title {
+.l3-hero.unified-vertical .copy .title {
   font-weight: 200;
   font-size: 40px;
   line-height: 48px;
   padding-bottom: 16px;
 }
-.l3-hero.unified-frame .copy .sub-text {
+.l3-hero.unified-vertical .copy .sub-text {
   font-weight: 200;
   font-size: 18px;
   line-height: 24px;
   padding-bottom: 16px;
 }
-.l3-hero.unified-frame .copy .cta-list {
+.l3-hero.unified-vertical .copy .cta-list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -57,7 +57,7 @@
   height: auto;
   margin-top: 16px;
 }
-.l3-hero.unified-frame .copy .cta-list .left-btn {
+.l3-hero.unified-vertical .copy .cta-list .left-btn {
   all: unset;
   width: auto;
   height: auto;
@@ -73,28 +73,27 @@
   cursor: pointer;
   text-align: center;
 }
-.l3-hero.unified-frame .copy .cta-list .list-anchor {
+.l3-hero.unified-vertical .copy .cta-list .list-anchor {
   margin-left: 24px;
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 600;
   font-size: 16px;
 }
-.l3-hero.unified-frame .copy .cta-list .right-arrow path {
+.l3-hero.unified-vertical .copy .cta-list .right-arrow path {
   stroke: var(--text-dark);
 }
-.l3-hero.unified-frame .media {
+.l3-hero.unified-vertical .media {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 50px 0;
+  align-items: flex-end;
   position: relative;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.l3-hero.unified-frame .media::after {
+.l3-hero.unified-vertical .media::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -104,52 +103,42 @@
   background-color: var(--primary-col);
   z-index: 0;
 }
-.l3-hero.unified-frame .media .main-img {
-  width: 55%;
-  height: auto;
-  display: block;
-  z-index: 1;
-}
-.l3-hero.unified-frame .media .hand-img {
+.l3-hero.unified-vertical .media .main-img {
   display: none;
 }
+.l3-hero.unified-vertical .media .hand-img {
+  display: block;
+  width: 70%;
+  height: auto;
+  z-index: 1;
+}
 @media (min-width: 768px) {
-  .l3-hero.unified-frame .copy {
+  .l3-hero.unified-vertical .copy {
     padding-top: 56px;
     padding-left: 76px;
     padding-right: 76px;
   }
 }
 @media (min-width: 992px) {
-  .l3-hero.unified-frame .copy {
+  .l3-hero.unified-vertical .copy {
     padding: 120px 0;
   }
-  .l3-hero.unified-frame .copy .title {
+  .l3-hero.unified-vertical .copy .title {
     font-size: 48px;
     line-height: 64px;
   }
-  .l3-hero.unified-frame .media {
-    justify-content: flex-end;
+  .l3-hero.unified-vertical .media {
+    justify-content: flex-start;
   }
-  .l3-hero.unified-frame .media::after {
+  .l3-hero.unified-vertical .media::after {
     top: 0;
-    bottom: auto;
+    bottom: 0;
     left: 60%;
-    width: 200%;
+    width: 100%;
     height: 100%;
     background-color: var(--primary-col);
   }
-  .l3-hero.unified-frame .media .main-img {
-    width: 83%;
+  .l3-hero.unified-vertical .media .hand-img {
+    width: 100%;
   }
-}
-
-:root {
-  --primary-col: #2668ff;
-  --accent-col: #0639a6;
-  --text-dark: #000000;
-  --text-light: #ffffff;
-  --background-col: #ffffff;
-  overflow: hidden;
-  font-family: "Inter", sans-serif;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=unified-vertical.css.map */

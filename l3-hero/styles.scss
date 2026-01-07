@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @import "variants/unified-frame";
+@import "variants/unified-vertical.css";
 
 :root {
   --primary-col: #2668ff;
@@ -8,84 +9,7 @@
   --text-dark: #000000;
   --text-light: #ffffff;
   --background-col: #ffffff;
+
   overflow: hidden;
-}
-
-.l3-hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  width: 100%;
-  height: auto;
   font-family: "Inter", sans-serif;
-  background-color: var(--background-col);
-
-  .copy {
-    padding-top: 56px;
-    padding-left: 39px;
-    padding-right: 39px;
-    text-align: left;
-    color: var(--text-dark);
-
-    .intro {
-      font-weight: 700;
-      font-size: 12px;
-      font-style: bold;
-    }
-
-    .title {
-      font-weight: 200;
-      font-size: 40px;
-      line-height: 48px;
-      padding-bottom: 16px;
-    }
-
-    .sub-text {
-      font-weight: 200;
-      font-size: 18px;
-      line-height: 24px;
-      padding-bottom: 16px;
-    }
-
-    .cta-list {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      height: auto;
-      margin-top: 16px;
-
-      .left-btn {
-        all: unset;
-        width: auto;
-        height: auto;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--accent-col);
-        padding: 20px 40px;
-        border-radius: 50px;
-        color: var(--text-light);
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        text-align: center;
-      }
-
-      .list-anchor {
-        margin-left: 24px;
-        text-decoration: none;
-        color: var(--text-dark);
-        font-weight: 600;
-        font-size: 16px;
-      }
-
-      .right-arrow {
-        path {
-          stroke: var(--text-dark);
-        }
-      }
-    }
-  }
 }
