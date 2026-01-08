@@ -1,0 +1,38 @@
+.l3-hero.unified-ecosystem {
+  .media {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    pointer-events: none;
+    user-select: none;
+
+    &::after {
+      height: 15%;
+      left: -50%;
+      width: 200%;
+    }
+
+    .hand-img {
+      display: block;
+      width: 70%;
+      height: auto;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .media {
+      justify-content: flex-start;
+
+      &::after {
+        left: -250%;
+        width: 400%;
+      }
+
+      .hand-img {
+        width: 100%;
+      }
+    }
+  }
+}
