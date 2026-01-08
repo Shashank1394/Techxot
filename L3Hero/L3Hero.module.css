@@ -9,6 +9,7 @@
   font-family: "Inter", sans-serif;
   @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 }
 :root :root {
   --primary-col: #2668ff;
@@ -428,6 +429,142 @@
     border-radius: 50%;
   }
   :root .l3-hero.unified-dot .media .hand-img {
+    width: 100%;
+  }
+}
+:root :root {
+  --primary-col: #2668ff;
+  --accent-col: #0639a6;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+  --background-col: #ffffff;
+  overflow: hidden;
+}
+:root .bg-base {
+  --background-col: #2668ff;
+  --text-dark: #ffffff;
+  --primary-col: #ffffff;
+}
+:root .l3-hero.unified-ecosystem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-col);
+}
+:root .l3-hero.unified-ecosystem .copy {
+  padding-top: 56px;
+  padding-left: 39px;
+  padding-right: 39px;
+  text-align: left;
+  color: var(--text-dark);
+}
+:root .l3-hero.unified-ecosystem .copy .brow {
+  font-weight: 700;
+  font-size: 12px;
+  font-style: bold;
+}
+:root .l3-hero.unified-ecosystem .copy .title {
+  font-weight: 200;
+  font-size: 40px;
+  line-height: 48px;
+  padding-bottom: 16px;
+}
+:root .l3-hero.unified-ecosystem .copy .sub-text {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+:root .l3-hero.unified-ecosystem .copy .cta-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+}
+:root .l3-hero.unified-ecosystem .copy .cta-list .left-btn {
+  all: unset;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-col);
+  padding: 20px 40px;
+  border-radius: 50px;
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+:root .l3-hero.unified-ecosystem .copy .cta-list .list-anchor {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 16px;
+}
+:root .l3-hero.unified-ecosystem .copy .cta-list .right-arrow path {
+  stroke: var(--text-dark);
+}
+:root .l3-hero.unified-ecosystem .media {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+:root .l3-hero.unified-ecosystem .media::after {
+  content: "";
+  position: absolute;
+  height: 15%;
+  left: -50%;
+  width: 200%;
+  background-color: var(--primary-col);
+  z-index: 0;
+}
+:root .l3-hero.unified-ecosystem .media .main-img {
+  display: none;
+}
+:root .l3-hero.unified-ecosystem .media .hand-img {
+  display: block;
+  width: 70%;
+  height: auto;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  :root .l3-hero.unified-ecosystem .copy {
+    padding-top: 56px;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+}
+@media (min-width: 992px) {
+  :root .l3-hero.unified-ecosystem .copy {
+    padding: 120px 0;
+  }
+  :root .l3-hero.unified-ecosystem .copy .title {
+    font-size: 48px;
+    line-height: 64px;
+  }
+  :root .l3-hero.unified-ecosystem .media {
+    justify-content: flex-start;
+  }
+  :root .l3-hero.unified-ecosystem .media::after {
+    left: -250%;
+    width: 400%;
+  }
+  :root .l3-hero.unified-ecosystem .media .hand-img {
     width: 100%;
   }
 }/*# sourceMappingURL=L3Hero.module.css.map */
