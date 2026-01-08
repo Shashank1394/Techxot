@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-@import "variants/unified-frame";
-@import "variants/unified-vertical.css";
-
 :root {
   --primary-col: #2668ff;
   --accent-col: #0639a6;
@@ -12,4 +9,6 @@
 
   overflow: hidden;
   font-family: "Inter", sans-serif;
+
+  @import "variants/variants";
 }

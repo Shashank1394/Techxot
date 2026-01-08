@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "variants/unified-vertical.css";
 :root {
   --primary-col: #2668ff;
   --accent-col: #0639a6;
@@ -32,7 +30,7 @@
   text-align: left;
   color: var(--text-dark);
 }
-.l3-hero.unified-frame .copy .intro {
+.l3-hero.unified-frame .copy .brow {
   font-weight: 700;
   font-size: 12px;
   font-style: bold;
@@ -142,14 +140,4 @@
   .l3-hero.unified-frame .media .main-img {
     width: 83%;
   }
-}
-
-:root {
-  --primary-col: #2668ff;
-  --accent-col: #0639a6;
-  --text-dark: #000000;
-  --text-light: #ffffff;
-  --background-col: #ffffff;
-  overflow: hidden;
-  font-family: "Inter", sans-serif;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=unified-frame.css.map */
