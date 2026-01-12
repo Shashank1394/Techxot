@@ -1,14 +1,20 @@
-"use client";
-
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 
+type HeroVariant =
+  | "unified-frame"
+  | "unified-vertical"
+  | "unified-dot"
+  | "unified-ecosystem";
+type HeroColorScheme = "bg-base";
+
 interface L3HeroProps {
-  variant?: string;
-  colorScheme?: string;
+  variant?: HeroVariant;
+  colorScheme?: HeroColorScheme;
 }
 
 export default function L3Hero({ variant, colorScheme }: L3HeroProps) {
+  const isUnifiedFrame = variant === "unified-frame";
   const classes = ["l3-hero", variant, colorScheme].filter(Boolean).join(" ");
 
   return (
@@ -63,22 +69,25 @@ export default function L3Hero({ variant, colorScheme }: L3HeroProps) {
           </Col>
 
           <Col className="media" xs={12} md={12} lg={{ span: 6, offset: 1 }}>
-            <Image
-              src="/assets/frame-img.png"
-              alt="Main"
-              width={600}
-              height={600}
-              className="frame-img"
-              priority
-            />
-
-            <Image
-              src="/assets/vertical-img.png"
-              alt="Hand"
-              width={200}
-              height={200}
-              className="vertical-img"
-            />
+            {isUnifiedFrame ? (
+              <Image
+                src="/assets/frame-img.png"
+                alt="Frame image"
+                width={600}
+                height={600}
+                className="frame-img"
+                priority
+              />
+            ) : (
+              <Image
+                src="/assets/standard-img.png"
+                alt="Standard image"
+                width={600}
+                height={600}
+                className="standard-img"
+                priority
+              />
+            )}
           </Col>
         </Row>
       </Container>

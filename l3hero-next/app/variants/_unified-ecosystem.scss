@@ -10,7 +10,7 @@
       width: 100vw;
     }
 
-    .vertical-img {
+    .standard-img {
       display: block;
       width: 70%;
       height: auto;
@@ -36,7 +36,7 @@
     .media {
       justify-content: flex-start;
 
-      .vertical-img {
+      .standard-img {
         width: 100%;
       }
     }
