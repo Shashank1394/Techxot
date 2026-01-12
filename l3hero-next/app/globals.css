@@ -93,6 +93,10 @@
   background-color: var(--primary-col);
   z-index: 0;
 }
+.l3-hero .media .frame-img,
+.l3-hero .media .standard-img {
+  display: none;
+}
 @media (min-width: 768px) {
   .l3-hero .copy {
     padding-top: 56px;

@@ -101,6 +101,11 @@
       background-color: var(--primary-col);
       z-index: 0;
     }
+
+    .frame-img,
+    .standard-img {
+      display: none;
+    }
   }
 
   @media (min-width: 768px) {
