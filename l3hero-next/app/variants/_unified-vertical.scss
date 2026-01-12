@@ -5,7 +5,7 @@
     align-items: flex-end;
     position: relative;
 
-    &::after {
+    &::before {
       width: 100vw;
       height: 40%;
     }
@@ -22,7 +22,7 @@
     .media {
       justify-content: flex-start;
 
-      &::after {
+      &::before {
         left: 67%;
         height: 100%;
       }

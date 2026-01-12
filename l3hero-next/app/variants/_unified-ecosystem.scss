@@ -5,7 +5,7 @@
     align-items: flex-end;
     position: relative;
 
-    &::after {
+    &::before {
       height: 15%;
       width: 100vw;
     }
@@ -20,7 +20,7 @@
 
   @media (min-width: 992px) {
     .copy {
-      &::after {
+      &::before {
         content: "";
         position: absolute;
         background-color: var(--primary-col);

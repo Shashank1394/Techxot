@@ -100,7 +100,7 @@
     pointer-events: none;
     user-select: none;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       background-color: var(--primary-col);

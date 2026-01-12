@@ -6,7 +6,7 @@
     padding: 50px 0;
     position: relative;
 
-    &::after {
+    &::before {
       bottom: 0;
       width: 100vw;
       height: 40%;
@@ -24,7 +24,7 @@
     .media {
       justify-content: flex-end;
 
-      &::after {
+      &::before {
         top: 0;
         bottom: 0;
         left: 67%;

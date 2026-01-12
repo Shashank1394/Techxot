@@ -5,7 +5,7 @@
     align-items: flex-end;
     position: relative;
 
-    &::after {
+    &::before {
       bottom: 10%;
       width: 55%;
       aspect-ratio: 1 / 1;
@@ -24,7 +24,7 @@
     .media {
       justify-content: flex-start;
 
-      &::after {
+      &::before {
         left: 17%;
         width: 83%;
         aspect-ratio: 1 / 1;
