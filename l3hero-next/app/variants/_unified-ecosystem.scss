@@ -4,16 +4,13 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    pointer-events: none;
-    user-select: none;
 
     &::after {
       height: 15%;
-      left: -50%;
-      width: 200%;
+      width: 100vw;
     }
 
-    .hand-img {
+    .vertical-img {
       display: block;
       width: 70%;
       height: auto;
@@ -22,15 +19,24 @@
   }
 
   @media (min-width: 992px) {
+    .copy {
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--primary-col);
+        z-index: 0;
+        bottom: 0;
+        height: 15%;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
     .media {
       justify-content: flex-start;
 
-      &::after {
-        left: -50%;
-        width: 150%;
-      }
-
-      .hand-img {
+      .vertical-img {
         width: 100%;
       }
     }

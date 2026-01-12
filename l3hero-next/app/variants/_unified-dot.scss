@@ -1,19 +1,18 @@
-.l3-hero.unified-ecosystem {
+.l3-hero.unified-dot {
   .media {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    pointer-events: none;
-    user-select: none;
 
     &::after {
-      height: 15%;
-      left: -50%;
-      width: 200%;
+      bottom: 10%;
+      width: 55%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
     }
 
-    .hand-img {
+    .vertical-img {
       display: block;
       width: 70%;
       height: auto;
@@ -26,11 +25,13 @@
       justify-content: flex-start;
 
       &::after {
-        left: -50%;
-        width: 150%;
+        left: 17%;
+        width: 83%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
       }
 
-      .hand-img {
+      .vertical-img {
         width: 100%;
       }
     }
