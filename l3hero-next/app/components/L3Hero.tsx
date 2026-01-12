@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import { Suspense } from "react";
 
 type HeroVariant =
   | "unified-frame"
@@ -13,7 +14,15 @@ interface L3HeroProps {
   colorScheme?: HeroColorScheme;
 }
 
-export default function L3Hero({ variant, colorScheme }: L3HeroProps) {
+async function Delay({ ms = 2000 }: { ms?: number }) {
+  await new Promise((r) => setTimeout(r, ms));
+  return null;
+}
+
+export default function L3Hero({
+  variant = "unified-frame",
+  colorScheme,
+}: L3HeroProps) {
   const isUnifiedFrame = variant === "unified-frame";
   const classes = ["l3-hero", variant, colorScheme].filter(Boolean).join(" ");
 
@@ -69,25 +78,31 @@ export default function L3Hero({ variant, colorScheme }: L3HeroProps) {
           </Col>
 
           <Col className="media" xs={12} md={12} lg={{ span: 6, offset: 1 }}>
-            {isUnifiedFrame ? (
-              <Image
-                src="/assets/frame-img.png"
-                alt="Frame image"
-                width={600}
-                height={600}
-                className="frame-img"
-                priority
-              />
-            ) : (
-              <Image
-                src="/assets/standard-img.png"
-                alt="Standard image"
-                width={600}
-                height={600}
-                className="standard-img"
-                priority
-              />
-            )}
+            <Suspense fallback={<div className="media-skeleton" />}>
+              <Delay ms={3000} />
+
+              {isUnifiedFrame ? (
+                <Image
+                  src="/assets/frame-img.png"
+                  alt="Frame image"
+                  width={600}
+                  height={600}
+                  className="frame-img"
+                  priority
+                  sizes="(min-width: 992px) 600px, 100vw"
+                />
+              ) : (
+                <Image
+                  src="/assets/standard-img.png"
+                  alt="Standard image"
+                  width={600}
+                  height={600}
+                  className="standard-img"
+                  priority
+                  sizes="(min-width: 992px) 600px, 100vw"
+                />
+              )}
+            </Suspense>
           </Col>
         </Row>
       </Container>

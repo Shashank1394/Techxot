@@ -87,6 +87,16 @@
      -moz-user-select: none;
           user-select: none;
 }
+.l3-hero .media .media-skeleton {
+  width: 55%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  height: auto;
+  background: linear-gradient(100deg, var(--accent-col) 30%, rgba(255, 255, 255, 0.35) 37%, var(--accent-col) 44%);
+  z-index: 3;
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
 .l3-hero .media::before {
   content: "";
   position: absolute;
@@ -108,8 +118,19 @@
     font-size: 48px;
     line-height: 64px;
   }
+  .l3-hero .media .media-skeleton {
+    width: 85%;
+  }
 }
 
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
 .l3-hero.unified-frame .media {
   display: flex;
   justify-content: center;
