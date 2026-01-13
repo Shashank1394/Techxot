@@ -82,7 +82,6 @@ export default function L3Hero({
                   height={600}
                   className="frame-img"
                   priority
-                  sizes="(min-width: 992px) 600px, 100vw"
                 />
               ) : (
                 <Image
@@ -92,7 +91,6 @@ export default function L3Hero({
                   height={600}
                   className="standard-img"
                   priority
-                  sizes="(min-width: 992px) 600px, 100vw"
                 />
               )}
             </Suspense>
