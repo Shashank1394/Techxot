@@ -14,11 +14,6 @@ interface L3HeroProps {
   colorScheme?: HeroColorScheme;
 }
 
-async function Delay({ ms = 2000 }: { ms?: number }) {
-  await new Promise((r) => setTimeout(r, ms));
-  return null;
-}
-
 export default function L3Hero({
   variant = "unified-frame",
   colorScheme,
@@ -79,8 +74,6 @@ export default function L3Hero({
 
           <Col className="media" xs={12} md={12} lg={{ span: 6, offset: 1 }}>
             <Suspense fallback={<div className="media-skeleton" />}>
-              <Delay ms={3000} />
-
               {isUnifiedFrame ? (
                 <Image
                   src="/assets/frame-img.png"
