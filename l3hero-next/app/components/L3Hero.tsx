@@ -13,8 +13,11 @@ interface L3HeroProps {
   colorScheme?: HeroColorScheme;
 }
 
-export default function L3Hero({ variant, colorScheme }: L3HeroProps) {
-  // const isUnifiedFrame = variant === "unified-frame";
+export default function L3Hero({
+  variant = "unified-frame",
+  colorScheme,
+}: L3HeroProps) {
+  const isUnifiedFrame = variant === "unified-frame";
   const classes = ["l3-hero", variant, colorScheme].filter(Boolean).join(" ");
 
   return (
@@ -69,25 +72,25 @@ export default function L3Hero({ variant, colorScheme }: L3HeroProps) {
           </Col>
 
           <Col className="media" xs={12} md={12} lg={{ span: 6, offset: 1 }}>
-            {/* {isUnifiedFrame ? ( */}
-            <Image
-              src="/assets/frame-img.png"
-              alt="Frame image"
-              width={600}
-              height={600}
-              className="frame-img"
-              priority
-            />
-            {/* ) : ( */}
-            <Image
-              src="/assets/standard-img.png"
-              alt="Standard image"
-              width={600}
-              height={600}
-              className="standard-img"
-              priority
-            />
-            {/* )} */}
+            {isUnifiedFrame ? (
+              <Image
+                src="/assets/frame-img.png"
+                alt="Frame image"
+                width={600}
+                height={600}
+                className="frame-img"
+                priority
+              />
+            ) : (
+              <Image
+                src="/assets/standard-img.png"
+                alt="Standard image"
+                width={600}
+                height={600}
+                className="standard-img"
+                priority
+              />
+            )}
           </Col>
         </Row>
       </Container>
