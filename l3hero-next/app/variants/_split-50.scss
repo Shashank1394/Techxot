@@ -8,23 +8,6 @@
   overflow: clip;
   background-color: var(--background-col);
 
-  .hero-container {
-    padding: 0;
-    max-width: 100%;
-  }
-
-  .hero-row {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 0;
-    min-height: 728px;
-
-    @media (min-width: 992px) {
-      flex-direction: row;
-      min-height: 640px;
-    }
-  }
-
   .copy {
     display: flex;
     flex-direction: column;
@@ -141,10 +124,6 @@
 
   // Tablet breakpoint (768px)
   @media (min-width: 768px) {
-    .hero-row {
-      min-height: 512px;
-    }
-
     .copy {
       padding: 68px 12px 32px;
 
@@ -167,10 +146,6 @@
   // Desktop breakpoint (992px+)
   @media (min-width: 992px) {
     min-height: 640px;
-
-    .hero-row {
-      flex-direction: row;
-    }
 
     .copy {
       padding: 164px 0 164px 300px;
@@ -196,11 +171,8 @@
     }
 
     .media {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 50%;
       height: 100%;
+      min-height: 640px;
       padding: 0;
 
       .hero-img {

@@ -18,8 +18,8 @@ export default function L2Hero({
 
   return (
     <div className={classes}>
-      <Container fluid className="hero-container">
-        <Row className="hero-row">
+      <Container>
+        <Row>
           <Col className="copy" xs={12} lg={6}>
             <p className="brow">EFFECT.SELECT.EXPORT</p>
 
@@ -70,7 +70,7 @@ export default function L2Hero({
           <Col className="media" xs={12} lg={6}>
             <Suspense fallback={<div className="media-skeleton" />}>
               <Image
-                src="/assets/standard-img.png"
+                src="/assets/image.png"
                 alt="Hero image"
                 width={948}
                 height={640}
