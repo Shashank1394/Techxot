@@ -1,0 +1,119 @@
+.l3-pricing-table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--background-col);
+  color: var(--text-dark);
+  padding: 64px 0;
+}
+.l3-pricing-table .pricing-col {
+  padding: 0 300px;
+  max-width: 100%;
+}
+.l3-pricing-table .heading {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0 0 64px;
+  color: var(--text-dark);
+  width: 536px;
+}
+.l3-pricing-table .description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 48px;
+  color: var(--text-dark);
+  width: 536px;
+  text-align: justify;
+}
+.l3-pricing-table .pricing-header {
+  display: grid;
+  grid-template-columns: 424px repeat(3, 200px);
+  gap: 0;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+  align-items: flex-end;
+  width: 100%;
+}
+.l3-pricing-table .header-empty {
+  display: block;
+}
+.l3-pricing-table .plan-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.l3-pricing-table .plan-name {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+}
+.l3-pricing-table .plan-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+}
+.l3-pricing-table .pricing-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+.l3-pricing-table .feature-row {
+  display: grid;
+  grid-template-columns: 424px repeat(3, 200px);
+  gap: 0;
+  padding: 32px 0;
+  border-bottom: 1px solid #d9d9d9;
+  align-items: center;
+  width: 100%;
+}
+.l3-pricing-table .feature-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.l3-pricing-table .feature-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  text-align: justify;
+}
+.l3-pricing-table .feature-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e8f0ff;
+  color: var(--accent-col);
+  font-weight: 700;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .l3-pricing-table {
+    padding: 64px 0;
+  }
+  .l3-pricing-table .pricing-col {
+    padding: 0 24px;
+  }
+}
+@media (min-width: 992px) {
+  .l3-pricing-table {
+    padding: 64px 0;
+  }
+  .l3-pricing-table .pricing-col {
+    padding: 0 32px;
+  }
+}/*# sourceMappingURL=PricingTable.css.map */
