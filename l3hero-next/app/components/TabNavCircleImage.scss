@@ -1,0 +1,498 @@
+.tab-nav-circle-image {
+  width: 100%;
+  background-color: var(--background-col);
+  padding: 64px 0;
+
+  // Container matches Bootstrap default max-width: 1140px at xl, scales down responsively
+  .container {
+    max-width: 1096px;
+  }
+
+  // Header Section - Full width, centered text
+  .header-section {
+    text-align: center;
+    padding-bottom: 16px;
+
+    .main-title {
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 56px;
+      color: var(--text-dark);
+      margin: 0;
+      padding-bottom: 16px;
+    }
+
+    .main-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--text-dark);
+      margin: 0;
+      height: 48px;
+    }
+  }
+
+  // Desktop Tab Navigation - Uses Bootstrap 6 x col-2 = 12 columns
+  .tab-navigation.desktop-tabs {
+    margin-top: 56px;
+    margin-bottom: 48px;
+    --bs-gutter-x: 0;
+
+    .tab-col {
+      padding: 0;
+    }
+
+    .tab-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 100%;
+
+      .tab-label {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.6);
+        padding-bottom: 16px;
+      }
+
+      .tab-underline {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      &.active {
+        .tab-label {
+          color: var(--primary-col);
+        }
+
+        .tab-underline {
+          height: 2px;
+          background-color: var(--primary-col);
+        }
+      }
+
+      &:hover:not(.active) {
+        .tab-label {
+          color: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+
+  // Desktop Content Section - Bootstrap grid: col-5 (text) + col-1 (offset) + col-6 (image)
+  .content-section.desktop-content {
+    align-items: flex-start;
+    margin-top: 48px;
+  }
+
+  // Text Column - lg-5 = ~424px at 1096px container
+  .text-col {
+    padding-top: 144px;
+
+    .text-content {
+      width: 100%;
+      max-width: 424px;
+    }
+
+    .content-title {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 56px;
+      color: var(--text-dark);
+      margin: 0;
+      padding-bottom: 16px;
+    }
+
+    .content-description {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--text-dark);
+      margin: 0;
+      padding-bottom: 16px;
+      height: 96px;
+    }
+
+    .learn-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding-top: 8px;
+      background: transparent;
+
+      .link-text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        color: var(--text-dark);
+        margin-top: 8px;
+      }
+
+      .link-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 100px;
+        background-color: var(--accent-col);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &:hover {
+        .link-text {
+          color: var(--primary-col);
+        }
+
+        .link-icon {
+          background-color: var(--primary-col);
+        }
+      }
+    }
+  }
+
+  // Image Column - lg-6 with offset-1 = 536px image at 1096px container
+  .image-col {
+    display: flex;
+    justify-content: flex-end;
+
+    .image-wrapper {
+      position: relative;
+      width: 536px;
+      height: 536px;
+    }
+
+    .circle-image {
+      width: 536px;
+      height: 536px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      .main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .badge-icon {
+      position: absolute;
+      top: 53px;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 500px;
+      background-color: var(--accent-col);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 48px;
+        height: 69px;
+      }
+    }
+  }
+
+  // Accordion Section - Hidden on desktop, shown on tablet/mobile
+  .accordion-section {
+    display: none;
+  }
+
+  // ============================================
+  // TABLET VIEW (768px) - Figma specifications
+  // px-76px, py-48px, 616px content width
+  // ============================================
+  @media (max-width: 991px) {
+    padding: 48px 0;
+
+    .container {
+      max-width: 100%;
+      padding-left: 76px;
+      padding-right: 76px;
+    }
+
+    .header-section {
+      .main-title {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      .main-subtitle {
+        height: 96px;
+      }
+    }
+
+    // Hide desktop tabs and content on tablet
+    .tab-navigation.desktop-tabs,
+    .content-section.desktop-content {
+      display: none;
+    }
+
+    // Show accordion on tablet
+    .accordion-section {
+      display: block;
+      margin-top: 32px;
+
+      // Accordion Item Header
+      .accordion-item {
+        .accordion-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 16px 0;
+          background: none;
+          border: none;
+          cursor: pointer;
+
+          .accordion-label {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 32px;
+            color: rgba(0, 0, 0, 0.6);
+          }
+
+          .accordion-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+
+        &.active {
+          .accordion-header {
+            .accordion-label {
+              color: var(--primary-col);
+            }
+
+            .accordion-icon {
+              color: var(--primary-col);
+            }
+          }
+        }
+      }
+
+      // Content Area (text + image side by side on tablet)
+      .accordion-content-area {
+        padding: 32px 0;
+
+        .content-wrapper {
+          display: flex;
+          align-items: flex-start;
+          gap: 24px;
+        }
+
+        .text-content {
+          width: 232px;
+          flex-shrink: 0;
+
+          .content-title {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 40px;
+            color: var(--text-dark);
+            margin: 0;
+            padding-bottom: 16px;
+          }
+
+          .content-description {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            color: var(--text-dark);
+            margin: 0;
+            padding-bottom: 16px;
+            height: 144px;
+          }
+
+          .learn-more-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            padding-top: 8px;
+            background: transparent;
+
+            .link-text {
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 16px;
+              color: var(--text-dark);
+              margin-top: 8px;
+            }
+
+            .link-icon {
+              width: 32px;
+              height: 32px;
+              border-radius: 100px;
+              background-color: var(--accent-col);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-decoration: none;
+
+              svg {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+
+        .image-content {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+
+          .image-wrapper {
+            position: relative;
+            width: 360px;
+            height: 360px;
+          }
+
+          .circle-image {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            .main-image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .badge-icon {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 500px;
+            background-color: var(--accent-col);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              width: 48px;
+              height: 69px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ============================================
+  // MOBILE VIEW (390px) - Figma specifications
+  // px-15px, py-48px, 360px content width
+  // ============================================
+  @media (max-width: 575px) {
+    padding: 48px 0;
+
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .header-section {
+      .main-title {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      .main-subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        height: 144px;
+      }
+    }
+
+    .accordion-section {
+      .accordion-item {
+        .accordion-header {
+          padding: 16px 0;
+
+          .accordion-label {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 32px;
+          }
+
+          .accordion-icon {
+            width: 32px;
+            height: 32px;
+
+            svg {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+      }
+
+      // Content stacks vertically on mobile: text first, then image
+      .accordion-content-area {
+        padding: 16px 0 32px;
+
+        .content-wrapper {
+          flex-direction: column;
+          gap: 32px;
+        }
+
+        .text-content {
+          width: 100%;
+
+          .content-title {
+            font-size: 32px;
+            line-height: 40px;
+          }
+
+          .content-description {
+            height: 96px;
+          }
+        }
+
+        .image-content {
+          justify-content: center;
+          width: 100%;
+
+          .image-wrapper {
+            width: 360px;
+            height: 360px;
+          }
+
+          .circle-image {
+            width: 360px;
+            height: 360px;
+          }
+
+          .badge-icon {
+            top: 60px;
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}
