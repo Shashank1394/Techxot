@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import { Suspense } from "react";
 
 type HeroVariant =
   | "unified-frame"
@@ -72,25 +73,27 @@ export default function L3Hero({
           </Col>
 
           <Col className="media" xs={12} md={12} lg={{ span: 6, offset: 1 }}>
-            {isUnifiedFrame ? (
-              <Image
-                src="/assets/frame-img.png"
-                alt="Frame image"
-                width={600}
-                height={600}
-                className="frame-img"
-                priority
-              />
-            ) : (
-              <Image
-                src="/assets/standard-img.png"
-                alt="Standard image"
-                width={600}
-                height={600}
-                className="standard-img"
-                priority
-              />
-            )}
+            <Suspense fallback={<div className="media-skeleton" />}>
+              {isUnifiedFrame ? (
+                <Image
+                  src="/assets/frame-img.png"
+                  alt="Frame image"
+                  width={600}
+                  height={600}
+                  className="frame-img"
+                  priority
+                />
+              ) : (
+                <Image
+                  src="/assets/standard-img.png"
+                  alt="Standard image"
+                  width={600}
+                  height={600}
+                  className="standard-img"
+                  priority
+                />
+              )}
+            </Suspense>
           </Col>
         </Row>
       </Container>
