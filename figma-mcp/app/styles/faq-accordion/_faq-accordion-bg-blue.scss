@@ -1,0 +1,36 @@
+// bg-blue variant for FAQ Accordion
+// Apply by adding .bg-blue class after .faq-accordion
+
+.faq-accordion.bg-blue {
+  background-color: var(--primary-col);
+
+  .faq-title {
+    color: var(--text-light);
+  }
+
+  .faq-question {
+    color: var(--text-light);
+  }
+
+  .faq-icon img {
+    filter: brightness(0) invert(1);
+  }
+
+  .faq-answer {
+    background-color: var(--text-light);
+  }
+
+  .faq-answer-text {
+    color: var(--text-dark);
+  }
+
+  .faq-learn-more {
+    .learn-more-text {
+      color: var(--text-dark);
+    }
+  }
+
+  .faq-divider {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
