@@ -1,0 +1,28 @@
+@use "./styles/faq-accordion/faq-accordion";
+@use "./styles/faq-accordion/variants";
+@use "./styles/form-wide/form-wide";
+
+:root {
+  --primary-col: #2668ff;
+  --accent-col: #0639a6;
+  --text-dark: #000;
+  --text-light: #fff;
+  --background-col: #fff;
+}
+
+.bg-base {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-col);
+  color: var(--text-dark);
+}

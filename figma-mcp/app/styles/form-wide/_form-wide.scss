@@ -1,0 +1,269 @@
+.form-wide {
+  background-color: var(--primary-col);
+  padding: 64px 15px;
+  overflow-x: hidden;
+
+  // Mobile defaults
+  .container {
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col-12,
+  [class*="col-md-"] {
+    padding: 0 12px;
+  }
+
+  // Tablet
+  @media (min-width: 768px) {
+    padding: 72px 12px;
+
+    .row {
+      margin: 0 -12px;
+    }
+
+    [class*="col-md-"] {
+      padding: 0 12px;
+    }
+  }
+
+  // Desktop
+  @media (min-width: 992px) {
+    padding: 80px 300px;
+
+    .container {
+      max-width: 1320px;
+    }
+  }
+
+  // Header Section
+  .form-wide-header {
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 992px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .form-wide-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--text-light);
+    margin: 0;
+    padding-bottom: 16px;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  .form-wide-subtitle {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--text-light);
+    margin: 0;
+    padding-bottom: 16px;
+
+    @media (min-width: 992px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .form-wide-description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: var(--text-light);
+    margin: 0;
+    max-width: 872px;
+  }
+
+  // Form Fields
+  .form-wide-fields {
+    margin-bottom: 24px;
+
+    .row {
+      margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        margin-left: -12px;
+        margin-right: -12px;
+      }
+    }
+  }
+
+  .form-field {
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .form-label {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    padding-bottom: 0;
+  }
+
+  .form-input {
+    all: unset;
+    display: block;
+    width: 100%;
+    height: 44px;
+    background-color: var(--text-light);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--text-dark);
+    padding: 0 12px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #858585;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .form-select-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .form-select {
+    appearance: none;
+    padding-right: 48px;
+    cursor: pointer;
+    color: #858585;
+  }
+
+  .select-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 28px;
+    height: 28px;
+  }
+
+  // Consent Section
+  .form-wide-consent {
+    margin-bottom: 24px;
+  }
+
+  .consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    cursor: pointer;
+  }
+
+  .consent-checkbox {
+    all: unset;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    background-color: var(--text-light);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:checked::after {
+      content: "✓";
+      color: var(--primary-col);
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .consent-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: var(--text-light);
+    padding-top: 4px;
+  }
+
+  .consent-link {
+    color: var(--text-light);
+    text-decoration: underline;
+  }
+
+  // Submit Button
+  .form-wide-submit {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+    border-radius: 500px;
+    padding: 16px 24px;
+    cursor: pointer;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      padding: 24px 32px;
+    }
+
+    &:hover {
+      background-color: var(--text-light);
+      color: var(--primary-col);
+    }
+  }
+
+  // Disclaimer
+  .form-wide-disclaimer {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: var(--text-light);
+    margin: 0;
+    padding-bottom: 16px;
+  }
+
+  .disclaimer-link {
+    color: var(--text-light);
+    text-decoration: underline;
+  }
+}

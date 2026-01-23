@@ -1,0 +1,18 @@
+// bg-black variant for FAQ Accordion
+// Apply by adding .bg-black class after .faq-accordion
+
+.faq-accordion.bg-black {
+  background-color: #000;
+
+  .faq-title {
+    color: var(--text-light);
+  }
+
+  .faq-question {
+    color: var(--text-light);
+  }
+
+  .faq-divider {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
